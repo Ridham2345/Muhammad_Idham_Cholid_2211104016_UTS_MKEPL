@@ -1,5 +1,5 @@
 public class MembershipStatus {
-    private String tingkatKeanggotaan; // e.g. "DASAR", "PREMIUM", "VIP"
+    private String tingkatKeanggotaan;
     private int poinLoyalitas;
 
     public MembershipStatus(String tingkatKeanggotaan, int poinLoyalitas) {
@@ -15,10 +15,6 @@ public class MembershipStatus {
         return poinLoyalitas;
     }
 
-     * Periksa apakah eligible upgrade:
-     * - Dari DASAR ke PREMIUM jika >100 poin
-     * - Dari PREMIUM ke VIP jika >500 poin
-     */
     public boolean isEligibleForUpgrade() {
         switch (tingkatKeanggotaan) {
             case "DASAR":
@@ -29,6 +25,7 @@ public class MembershipStatus {
                 return false;
         }
     }
+
     public boolean upgrade() {
         if (!isEligibleForUpgrade()) {
             return false;
@@ -38,7 +35,6 @@ public class MembershipStatus {
         } else if (tingkatKeanggotaan.equals("PREMIUM")) {
             tingkatKeanggotaan = "VIP";
         }
-        // reset atau adjust poin sesuai kebijakan
         poinLoyalitas = 0;
         return true;
     }
