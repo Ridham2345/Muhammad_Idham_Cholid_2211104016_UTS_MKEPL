@@ -2,12 +2,6 @@ import java.util.Date;
 import java.util.Calendar;
 
 public class LibraryMember {
-
-    private String namaLengkap;
-    private String alamat;
-    private String nomorTelepon;
-    private String email;
-    private String jenisKelamin;
     private String kodeAnggota;
     private Date tanggalGabung;
     private boolean statusAktif;
@@ -24,12 +18,7 @@ public class LibraryMember {
             String tingkatKeanggotaan, int jumlahBukuDipinjam,
             int jumlahTerlambat, int jumlahDenda, int poinLoyalitas,
             String kodeReferal, boolean langgananBuletin) {
-
-        this.namaLengkap = namaLengkap;
-        this.alamat = alamat;
-        this.nomorTelepon = nomorTelepon;
-        this.email = email;
-        this.jenisKelamin = jenisKelamin;
+                
         this.kodeAnggota = kodeAnggota;
         this.tanggalGabung = tanggalGabung;
         this.statusAktif = statusAktif;
