@@ -1,3 +1,5 @@
+import java.util.Date;
+
 public class LibraryMember {
     private PersonalInfo personalInfo;
     private String kodeAnggota;
@@ -9,8 +11,8 @@ public class LibraryMember {
     private boolean langgananBuletin;
 
     public LibraryMember(PersonalInfo personalInfo, String kodeAnggota, Date tanggalGabung,
-                         boolean statusAktif, MembershipStatus membershipStatus, RiskProfile riskProfile,
-                         String kodeReferal, boolean langgananBuletin) {
+        boolean statusAktif, MembershipStatus membershipStatus, RiskProfile riskProfile,
+        String kodeReferal, boolean langgananBuletin) {
         this.personalInfo = personalInfo;
         this.kodeAnggota = kodeAnggota;
         this.tanggalGabung = tanggalGabung;
